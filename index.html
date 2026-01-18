@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Habit Tracker</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -27,13 +27,40 @@
         }
     </script>
     <style>
+        /* --- CUSTOM SCROLLBAR --- */
+        ::-webkit-scrollbar {
+            width: 3px;  /* Very thin */
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent; /* Invisible track */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #d278d5; /* Light cool gray */
+            border-radius: 20px;       /* Rounded edges */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #6366f1; /* Indigo when you grab it */
+        }
+
+        /* Dark mode adjustment */
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: #475569;
+        }
+        
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background-color: #818cf8;
+        }
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         
         /* --- NOTION OPTIMIZATION --- */
         body { 
             font-family: 'Inter', sans-serif;
             /* This is the magic fix for Notion Embeds: */
-            zoom: 0.50; 
+            zoom: 0.30; 
         }
 
         * { transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
